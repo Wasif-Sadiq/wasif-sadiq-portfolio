@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface Particle {
@@ -36,7 +36,17 @@ const generateParticles = (): Particle[] => {
 };
 
 export default function FloatingParticles() {
-  const [particles] = useState<Particle[]>(generateParticles);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    setParticles(generateParticles());
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">

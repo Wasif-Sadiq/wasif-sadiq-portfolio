@@ -25,13 +25,14 @@ const roles = [
   },
 ];
 
-const aboutParagraph = `From writing first lines of code to leading engineering strategy, my journey has been focused on building exceptional mobile experiences and intelligent systems powered by AI.`;
+const aboutParagraph = `From writing first lines of code to leading engineering strategy, my journey has been focused on building exceptional mobile experiences and intelligent systems powered by AI.
+`;
 
 export default function About() {
   return (
-    <section id="about" className="py-32 md:py-40 lg:py-48 relative">
+    <section id="about" className="pt-48 md:pt-56 lg:pt-64 pb-32 md:pb-40 lg:pb-48 relative">
       <div className="section-shell">
-        <motion.div
+         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -43,9 +44,53 @@ export default function About() {
             <span className="block text-gradient-accent">products that scale</span>
             <span className="block">with confidence.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-text-secondary max-w-6xl mx-auto leading-relaxed font-light px-4">
+          <p className="text-xl md:text-2xl text-text-secondary max-w-6xl mx-auto leading-relaxed font-light px-4 mb-16 md:mb-20">
             {aboutParagraph}
           </p>
+
+          {/* Divider lines after about text */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "24rem" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "20rem" }}
+            transition={{ delay: 0.45, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1.5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1.5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "12rem" }}
+            transition={{ delay: 0.55, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1.5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "8rem" }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1.5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "5rem" }}
+            transition={{ delay: 0.65, duration: 0.8 }}
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1.5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "2rem" }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/20 to-transparent mt-1.5"
+          />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8 max-w-6xl mx-auto">

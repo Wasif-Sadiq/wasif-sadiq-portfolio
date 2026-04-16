@@ -36,15 +36,17 @@ export interface Project {
   description: string;
   techStack: string[];
   featured?: boolean;
+  image?: string;
+  imageAlt?: string;
 }
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Persona-Based AI Video Script Agent",
+    title: "Heedy",
     description:
-      "AI system that generates personalized video scripts using NLP and knowledge graphs for healthcare sales professionals.",
-    techStack: ["Flutter", "Python", "NLP", "GPT API", "Knowledge Graphs"],
+      "Elderly care mobile app with chatbot, emergency features, and weather updates.",
+    techStack: ["Flutter", "Firebase", "Chatbot API"],
     featured: true,
   },
   {
@@ -52,7 +54,7 @@ export const projects: Project[] = [
     title: "AI Smart Notes",
     description:
       "GPT-powered note-taking app with intelligent organization and writing assistance.",
-    techStack: ["Flutter", "GPT API", "NLP"],
+    techStack: ["Flutter", "GPT API", "Firebase"],
     featured: true,
   },
   {
@@ -70,20 +72,22 @@ export const projects: Project[] = [
       "AI therapy app with multiple counselor personalities.",
     techStack: ["Flutter", "AI Agents", "Persona Design"],
     featured: true,
+    image: "/images/projects/mindchat.jpeg",
+    imageAlt: "MindChat AI Therapy App",
   },
   {
     id: 5,
-    title: "Heedy App",
-    description:
-      "Elderly care mobile app with chatbot, emergency features, and weather updates.",
-    techStack: ["Flutter", "Firebase", "Chatbot API"],
-  },
-  {
-    id: 6,
     title: "Environmental Air Platform",
     description:
       "Helps users improve indoor environments using structured, science-backed insights.",
-    techStack: ["Flutter", "API Integration", "Data Visualization"],
+    techStack: ["Next.js", "React", "TypeScript", "API Integration", "Data Visualization"],
+  },
+  {
+    id: 6,
+    title: "Persona-Based AI Video Script Agent",
+    description:
+      "AI system that generates personalized video scripts using NLP and knowledge graphs for healthcare sales professionals.",
+    techStack: ["Python", "NLP", "GPT API", "Knowledge Graphs", "LangChain"],
   },
 ];
 
@@ -99,7 +103,7 @@ export const experience = [
     id: 2,
     role: "Freelance Flutter Developer",
     company: "Self-Employed",
-    period: "2021 – 2026",
+    period: "2019 – 2026",
     description: [],
   },
 ];

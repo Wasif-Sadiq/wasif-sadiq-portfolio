@@ -156,6 +156,50 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
+          {/* Divider lines before hero heading */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "32rem" }}
+            transition={{ delay: 0.1, duration: 0.8 }}
+            className="mx-auto h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mb-8"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "28rem" }}
+            transition={{ delay: 0.15, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-1 mb-6"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "24rem" }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1 mb-5"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "20rem" }}
+            transition={{ delay: 0.25, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1 mb-4"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1 mb-3"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "12rem" }}
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1 mb-2"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "8rem" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1 mb-12"
+          />
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-black mb-8 sm:mb-10 md:mb-12 leading-[0.95] tracking-tighter space-y-2">
             <span className="block text-white">Flutter</span>
             <span className="block text-gradient-accent">& AI</span>
@@ -166,7 +210,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-12 sm:mb-16 md:mb-20 max-w-6xl mx-auto leading-relaxed font-light px-4"
+            className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-24 sm:mb-32 md:mb-40 max-w-6xl mx-auto leading-relaxed font-light px-4"
           >
             Building intelligent Flutter applications powered by artificial intelligence. Creating beautiful, performant mobile experiences with integrated AI systems.
           </motion.p>
@@ -175,7 +219,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 mb-24 sm:mb-28 md:mb-32 px-4"
+             className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 mb-32 sm:mb-36 md:mb-40 px-4"
           >
             <button
               onClick={() => {
@@ -184,7 +228,7 @@ export default function Hero() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="button-primary flex items-center justify-center gap-2 group px-8 py-4 sm:px-10 sm:py-5"
+              className="button-primary flex items-center justify-center gap-2 group px-6 py-3 sm:px-8 sm:py-4"
             >
               View Projects
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -196,18 +240,68 @@ export default function Hero() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="button-secondary flex items-center justify-center gap-2 group px-8 py-4 sm:px-10 sm:py-5"
+              className="button-secondary flex items-center justify-center gap-2 group px-6 py-3 sm:px-8 sm:py-4"
             >
               <Mail className="w-5 h-5" />
               Contact Me
             </button>
           </motion.div>
 
+          {/* Divider lines */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "28rem" }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mx-auto h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mt-16"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "24rem" }}
+            transition={{ delay: 0.65, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "20rem" }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.75, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "12rem" }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "8rem" }}
+            transition={{ delay: 0.85, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "5rem" }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "3rem" }}
+            transition={{ delay: 0.95, duration: 0.8 }}
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1 mb-20 sm:mb-24 md:mb-28"
+          />
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4 sm:gap-5 px-4 mt-4"
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="flex flex-wrap justify-center gap-4 sm:gap-5 px-4 mt-16 md:mt-20"
           >
             {["Flutter", "Dart", "AI/ML", "Python", "NLP", "Firebase"].map((tech, index) => (
               <motion.span
@@ -216,7 +310,7 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ delay: 0.9 + index * 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="tag-modern"
+                className="tag-modern text-xs py-1 px-3"
               >
                 {tech}
               </motion.span>
@@ -228,7 +322,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 right-8 md:right-12 lg:right-16"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}

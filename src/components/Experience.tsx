@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { experience } from "@/data/portfolio";
 
 const stats = [
-  { value: "30+", label: "Projects Built" },
-  { value: "5+", label: "Years Experience" },
-  { value: "50+", label: "Happy Clients" },
+  { value: "80+", label: "Projects Built" },
+  { value: "7+", label: "Years Experience" },
+  { value: "100+", label: "Happy Clients" },
 ];
 
 export default function Experience() {
@@ -27,26 +27,107 @@ export default function Experience() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-24 md:mb-28"
         >
+          {/* Divider lines before Work Experience badge */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.1, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent mb-6"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "12rem" }}
+            transition={{ delay: 0.15, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1.5 mb-4"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "8rem" }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1.5 mb-8"
+          />
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6"
+            transition={{ delay: 0.25, duration: 0.6 }}
+            className="mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm text-text-secondary">
+            <span className="inline-flex items-center gap-3 px-8 py-4 glass rounded-full text-sm text-text-secondary">
               <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
               Work Experience
             </span>
           </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-10 md:mb-12 leading-[0.95]">
+
+          {/* Divider lines after Work Experience badge */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "8rem" }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-8 mb-4"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "12rem" }}
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1.5 mb-6"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1.5 mb-10"
+          />
+
+          {/* Divider lines before experience heading */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "24rem" }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mb-10"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "20rem" }}
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1.5 mb-8"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1.5 mb-6"
+          />
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-[0.95]">
             <span className="block">Execution at startup</span>
             <span className="block text-gradient-accent">speed with enterprise-grade</span>
             <span className="block">architecture.</span>
           </h2>
+
+          {/* Divider lines after experience heading */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "16rem" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-6 mb-6"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "20rem" }}
+            transition={{ delay: 0.55, duration: 0.8 }}
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1.5 mb-8"
+          />
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "24rem" }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1.5 mb-10"
+          />
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-20 md:mb-24">
           {experience.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -54,19 +135,19 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group"
+              className="group w-full flex"
             >
                 <motion.div
                   whileHover={{ scale: 1.01, y: -3 }}
                   transition={{ duration: 0.3 }}
-                  className={`${exp.company === 'Grayhat' ? 'card-corporate' : 'card-freelance'} overflow-hidden`}
+                  className={`${exp.company === 'Grayhat' ? 'card-corporate' : 'card-freelance'} overflow-hidden w-full h-full flex flex-col`}
                 >
                 <button
                   type="button"
                   onClick={() => toggleIndex(index)}
                    className="w-full flex items-center p-9 md:p-10 text-left hover:bg-gray-800/20 transition-colors duration-300"
                 >
-                  <div className="flex-1">
+                  <div className="flex-1 text-center">
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">
                       {exp.company}
                     </h3>
@@ -104,12 +185,56 @@ export default function Experience() {
           ))}
         </div>
 
+        {/* Divider lines before stats */}
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "24rem" }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-16"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "20rem" }}
+          transition={{ delay: 0.35, duration: 0.8 }}
+          className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "16rem" }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "12rem" }}
+          transition={{ delay: 0.45, duration: 0.8 }}
+          className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "8rem" }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "5rem" }}
+          transition={{ delay: 0.55, duration: 0.8 }}
+          className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "2rem" }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/20 to-transparent mt-1.5 mb-16 md:mb-20"
+        />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-           className="mt-24 md:mt-32 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto"
+          transition={{ delay: 0.6, duration: 0.8 }}
+           className="grid gap-6 sm:grid-cols-3 max-w-3xl mx-auto"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -126,6 +251,50 @@ export default function Experience() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Divider lines after stats */}
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "2rem" }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/20 to-transparent mt-20"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "5rem" }}
+          transition={{ delay: 0.95, duration: 0.8 }}
+          className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "8rem" }}
+          transition={{ delay: 1.0, duration: 0.8 }}
+          className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "12rem" }}
+          transition={{ delay: 1.05, duration: 0.8 }}
+          className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "16rem" }}
+          transition={{ delay: 1.1, duration: 0.8 }}
+          className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "20rem" }}
+          transition={{ delay: 1.15, duration: 0.8 }}
+          className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1.5"
+        />
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "24rem" }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1.5 mb-16"
+        />
       </div>
     </section>
   );

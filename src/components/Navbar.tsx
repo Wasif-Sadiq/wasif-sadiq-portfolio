@@ -36,24 +36,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-4 md:inset-x-6 lg:inset-x-8 top-4 z-50 mx-auto max-w-[980px] rounded-2xl transition-all duration-500 ${
+      className={`fixed left-1/2 -translate-x-1/2 top-4 z-50 mx-auto w-[calc(100%-2rem)] md:w-[calc(100%-3rem)] lg:w-[calc(100%-4rem)] max-w-[980px] rounded-2xl transition-all duration-500 ${
         isScrolled
           ? "glass-strong shadow-glow"
           : "glass"
       }`}
     >
-      <nav className="flex items-center justify-between px-6 py-4">
+      <nav className="flex items-center justify-between px-6 py-4 md:px-8 md:py-5">
         <motion.a
           href="#hero"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-lg font-bold tracking-wide text-white hover:text-cyan-300 transition-colors relative group"
+          className="text-lg font-bold tracking-wide text-white hover:text-cyan-300 transition-colors relative group px-4 py-2 rounded-xl hover:bg-white/5 ml-4 min-w-[200px]"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Wasif Sadiq
+          <span className="text-transparent select-none pointer-events-none">Sahab </span>
+          <span className="absolute left-4">Wasif Sadiq</span>
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full" />
         </motion.a>
 
@@ -61,15 +62,22 @@ export default function Navbar() {
         <ul className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <li key={item.name}>
-              <motion.button
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-text-secondary transition-all duration-300 hover:text-white relative group py-2"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item.name}
-                <span className="absolute -bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full" />
-              </motion.button>
+                <motion.button
+                  onClick={() => scrollToSection(item.href)}
+                  className={`text-sm font-medium text-text-secondary transition-all duration-300 hover:text-white relative group px-4 py-2 rounded-xl hover:bg-white/5 ${item.name === "Contact" ? "min-w-[90px]" : ""}`}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.name === "Contact" ? (
+                    <>
+                      <span className="text-transparent select-none pointer-events-none"> b</span>
+                      <span className="absolute left-4">Contact</span>
+                    </>
+                  ) : (
+                    item.name
+                  )}
+                  <span className="absolute -bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full" />
+                </motion.button>
             </li>
           ))}
         </ul>

@@ -27,6 +27,25 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-white/5">
+      {/* Divider lines before footer */}
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "20rem" }}
+        transition={{ delay: 0.1, duration: 0.8 }}
+        className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent absolute -top-6 left-1/2 -translate-x-1/2"
+      />
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "16rem" }}
+        transition={{ delay: 0.15, duration: 0.8 }}
+        className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/35 to-transparent absolute -top-3 left-1/2 -translate-x-1/2"
+      />
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "12rem" }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent absolute -top-1 left-1/2 -translate-x-1/2"
+      />
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary/80 to-transparent" />
 
@@ -45,11 +64,7 @@ export default function Footer() {
               Full-stack developer passionate about creating exceptional digital experiences
               with modern technologies and clean code.
             </p>
-            <div className="flex items-center gap-2 text-slate-500">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>using Next.js & Tailwind</span>
-            </div>
+
           </motion.div>
 
           {/* Navigation Links */}
@@ -114,21 +129,31 @@ export default function Footer() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Wasif Sadiq. All rights reserved.
-          </p>
 
-          <motion.button
-            onClick={scrollToTop}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-400 hover:text-cyan-300 hover:border-cyan-400/30 transition-all group"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowUp className="h-4 w-4 group-hover:-translate-y-0.5 transition-transform" />
-            Back to Top
-          </motion.button>
+
+
         </motion.div>
       </div>
+
+      {/* Divider lines after footer */}
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "12rem" }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent absolute -bottom-1 left-1/2 -translate-x-1/2"
+      />
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "16rem" }}
+        transition={{ delay: 0.35, duration: 0.8 }}
+        className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/35 to-transparent absolute -bottom-3 left-1/2 -translate-x-1/2"
+      />
+      <motion.div
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1, width: "20rem" }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent absolute -bottom-6 left-1/2 -translate-x-1/2"
+      />
     </footer>
   );
 }
