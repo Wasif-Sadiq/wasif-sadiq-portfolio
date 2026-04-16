@@ -5,7 +5,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-48 md:pt-56 lg:pt-64 xl:pt-72 pb-40 md:pb-48 overflow-hidden perspective-1200">
+           <section id="hero" className="relative min-h-screen flex items-center justify-center pt-12 sm:pt-20 md:pt-40 lg:pt-48 pb-16 sm:pb-24 md:pb-32 lg:pb-40 overflow-hidden perspective-1200">
       {/* Aurora Gradient Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -126,27 +126,27 @@ export default function Hero() {
 
       {/* Animated particle rings */}
       <motion.div 
-        className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden sm:block"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.4, scale: 1 }}
         transition={{ delay: 1.5, duration: 2 }}
       >
         <motion.div 
-          className="w-[600px] h-[600px] rounded-full border border-white/5"
+          className="w-48 sm:w-[300px] md:w-[400px] lg:w-[600px] h-48 sm:h-[300px] md:h-[400px] lg:h-[600px] rounded-full border border-white/5"
           animate={{ rotate: 360 }}
           transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
         />
         <motion.div 
-          className="absolute inset-8 rounded-full border border-cyan-500/5"
+          className="absolute rounded-full border border-cyan-500/5"
           animate={{ rotate: -360 }}
           transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-          style={{ top: 32, left: 32, right: 32, bottom: 32 }}
+          style={{ top: 16, left: 16, right: 16, bottom: 16 }}
         />
         <motion.div 
-          className="absolute inset-16 rounded-full border border-purple-500/5"
+          className="absolute rounded-full border border-purple-500/5"
           animate={{ rotate: 360 }}
           transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
-          style={{ top: 64, left: 64, right: 64, bottom: 64 }}
+          style={{ top: 32, left: 32, right: 32, bottom: 32 }}
         />
       </motion.div>
 
@@ -159,48 +159,48 @@ export default function Hero() {
           {/* Divider lines before hero heading */}
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "32rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="mx-auto h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mb-8"
+            className="mx-auto h-1 sm:h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mb-2 sm:mb-4 max-w-48 sm:max-w-xs md:max-w-md lg:max-w-2xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "28rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.15, duration: 0.8 }}
-            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-1 mb-6"
+            className="mx-auto h-0.5 sm:h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-0.5 sm:mt-1 mb-1.5 sm:mb-3 max-w-44 sm:max-w-sm md:max-w-lg lg:max-w-xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "24rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1 mb-5"
+            className="mx-auto h-0.5 sm:h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-0.5 sm:mt-1 mb-1 sm:mb-3 max-w-40 sm:max-w-md md:max-w-lg lg:max-w-2xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "20rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.25, duration: 0.8 }}
-            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1 mb-4"
+            className="mx-auto h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-0.5 sm:mt-1 mb-1 sm:mb-2 max-w-36 sm:max-w-xs md:max-w-md lg:max-w-xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "16rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1 mb-3"
+            className="mx-auto h-0.5 sm:h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-0.5 sm:mt-1 mb-0.5 sm:mb-2 max-w-32 sm:max-w-48 md:max-w-xs lg:max-w-lg"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "12rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.35, duration: 0.8 }}
-            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1 mb-2"
+            className="mx-auto h-0.25 sm:h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-0.5 sm:mt-1 mb-0.5 sm:mb-1 max-w-24 sm:max-w-40 md:max-w-xs lg:max-w-md"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "8rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1 mb-12"
+            className="mx-auto h-0.25 sm:h-0.5 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-0.5 sm:mt-1 mb-3 sm:mb-6 max-w-20 sm:max-w-32 md:max-w-48 lg:max-w-xs"
           />
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-black mb-8 sm:mb-10 md:mb-12 leading-[0.95] tracking-tighter space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black mb-2 sm:mb-4 md:mb-8 lg:mb-10 leading-[0.95] tracking-tighter space-y-1 sm:space-y-2">
             <span className="block text-white">Flutter</span>
             <span className="block text-gradient-accent">& AI</span>
             <span className="block text-white">Engineer.</span>
@@ -210,7 +210,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-24 sm:mb-32 md:mb-40 max-w-6xl mx-auto leading-relaxed font-light px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-2xl text-text-secondary mb-6 sm:mb-10 md:mb-16 lg:mb-24 max-w-xl sm:max-w-3xl md:max-w-6xl mx-auto leading-relaxed font-light px-4"
           >
             Building intelligent Flutter applications powered by artificial intelligence. Creating beautiful, performant mobile experiences with integrated AI systems.
           </motion.p>
@@ -219,7 +219,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-             className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 mb-32 sm:mb-36 md:mb-40 px-4"
+             className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 lg:gap-8 mb-8 sm:mb-12 md:mb-16 lg:mb-24 px-4"
           >
             <button
               onClick={() => {
@@ -250,58 +250,58 @@ export default function Hero() {
           {/* Divider lines */}
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "28rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mx-auto h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mt-16"
+            className="mx-auto h-2 bg-gradient-to-r from-transparent via-black/60 to-transparent mt-8 sm:mt-12 lg:mt-16 max-w-40 sm:max-w-md lg:max-w-2xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "24rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.65, duration: 0.8 }}
-            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-1"
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/55 to-transparent mt-1 max-w-36 sm:max-w-sm lg:max-w-xl"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "20rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1"
+            className="mx-auto h-1.5 bg-gradient-to-r from-transparent via-black/50 to-transparent mt-1 max-w-32 sm:max-w-xs lg:max-w-lg"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "16rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.75, duration: 0.8 }}
-            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1"
+            className="mx-auto h-1 bg-gradient-to-r from-transparent via-black/45 to-transparent mt-1 max-w-28 sm:max-w-[200px] lg:max-w-md"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "12rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1"
+            className="mx-auto h-0.75 bg-gradient-to-r from-transparent via-black/40 to-transparent mt-1 max-w-24 sm:max-w-40 lg:max-w-sm"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "8rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.85, duration: 0.8 }}
-            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1"
+            className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-black/35 to-transparent mt-1 max-w-20 sm:max-w-32 lg:max-w-xs"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "5rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1"
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/30 to-transparent mt-1 max-w-16 sm:max-w-24"
           />
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "3rem" }}
+            animate={{ opacity: 1, width: "auto" }}
             transition={{ delay: 0.95, duration: 0.8 }}
-            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1 mb-20 sm:mb-24 md:mb-28"
+            className="mx-auto h-0.25 bg-gradient-to-r from-transparent via-black/25 to-transparent mt-1 mb-10 sm:mb-16 md:mb-20 max-w-12 sm:max-w-16"
           />
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4 sm:gap-5 px-4 mt-16 md:mt-20"
+            className="flex flex-wrap justify-center gap-4 sm:gap-5 px-4 mt-6 sm:mt-12 md:mt-16"
           >
             {["Flutter", "Dart", "AI/ML", "Python", "NLP", "Firebase"].map((tech, index) => (
               <motion.span
@@ -322,7 +322,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 right-8 md:right-12 lg:right-16"
+          className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 md:right-12 lg:right-16"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}

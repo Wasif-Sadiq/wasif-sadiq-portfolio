@@ -43,7 +43,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Heedy",
+    title: "Heedy App",
     description:
       "Elderly care mobile app with chatbot, emergency features, and weather updates.",
     techStack: ["Flutter", "Firebase", "Chatbot API"],
